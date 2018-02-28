@@ -1,0 +1,99 @@
+ul li{
+  list-style: none;
+}
+li{
+  line-height: 30px;
+  display: block;
+  width: 200px;
+  background: pink;
+  padding-left:20px;
+
+}
+a{
+  color:#666;
+  display: block;
+}
+.nav-sub li{
+  background: pink;
+}
+
+.active,.selected{
+  background: rgba(0 ,0 , 0 , 0.1);
+}
+
+.slideNav{
+  ul{
+    list-style: none;
+    a{
+      display: block;
+    }
+    .selected{
+      a{
+        background: rgba(0 ,0 , 0 , 0.10);
+      }
+    }
+    i{
+      font-style: normal;
+    }
+    span{
+      -webkit-user-select : none;
+      -moz-user-select : none;
+      -ms-user-select : none;
+      user-select : none;
+    }
+  }
+  .nav-sub{
+    padding-left: 20px;
+  }
+  .status{
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: red;
+    margin-right:5px;
+  }
+  .nav-icon {
+    float: left;
+    line-height: inherit;
+    margin-right: 0.3rem;
+    top: 0;
+    min-width: 1.5rem;
+  }
+}
+.slideNav{
+  ul{
+    li{
+      ul{
+        li{
+          a{
+            padding-left: 24px;
+          }
+          ul{
+            li{
+              a{
+                padding-left: 48px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.nav-name{
+  display: inline-block!important;
+  width: 120px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.ng-dark .slideNav{
+  ul{
+    .selected{
+      a{
+        background: rgba(255 ,255 , 255 , 0.1);
+      }
+    }
+  }
+}
