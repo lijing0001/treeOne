@@ -1,0 +1,14 @@
+<ul>
+  <li [ngClass]="{'active': active == 0}" (click)="checkTab(0)">tab1</li>
+  <li [ngClass]="{'active': active == 1}" (click)="checkTab(1)">tab2</li>
+  <li [ngClass]="{'active': active == 2}" (click)="checkTab(2)">tab3</li>
+</ul>
+<div *ngIf="active == 0">
+  tab1内容
+</div>
+<div *ngIf="active == 1">
+  tab2内容
+</div>
+<div *ngIf="active == 2">
+  tab3内容
+</div>
