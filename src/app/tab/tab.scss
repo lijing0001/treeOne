@@ -1,4 +1,4 @@
-ul{
+.list{
   list-style: none;
   height: 40px;
   border: 1px solid #ddd;
@@ -6,8 +6,9 @@ ul{
   margin: 0;
   padding: 0;
   line-height: 40px;
+  position: relative;
 }
-ul li{
+.list li{
   padding: 0;
   margin: 0;
   float: left;
@@ -15,16 +16,38 @@ ul li{
   cursor: pointer;
   text-align: center;
 }
-ul li.active{
+.list li.active{
   color: blue;
   background: pink;
 }
 
-div{
+.list div{
   border: 1px solid #ddd;
   width: 300px;
   height: 200px;
   margin-top: 10px;
   text-align: center;
   line-height: 200px;
+  position: absolute;
+  left:0;
+}
+.rightMenusNav {
+  padding: 0;
+  margin:0;
+  list-style: none;
+  border: 1px solid #ddd;
+  width: 120px;
+   position: fixed;
+  z-index: 2;
+  display: none;
+  background: #fff;
+}
+.rightMenusNav li{
+ padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.rightMenusNav  li:hover{
+background: #f00;
 }

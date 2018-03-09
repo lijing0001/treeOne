@@ -1,14 +1,14 @@
-<ul>
-  <li [ngClass]="{'active': active == 0}" (click)="checkTab(0)">tab1</li>
-  <li [ngClass]="{'active': active == 1}" (click)="checkTab(1)">tab2</li>
-  <li [ngClass]="{'active': active == 2}" (click)="checkTab(2)">tab3</li>
+<ul class = "list">
+  <li *ngFor="let item of list;let i = index;" [ngClass]="{'active': active == i}" (click)="checkTab(i)" (contextmenu)='onRightMenus($event,item)'>
+    <span>{{item.name}}</span>
+    <div *ngIf="active == i">
+      {{item.text}}
+    </div>
+  </li>
 </ul>
-<div *ngIf="active == 0">
-  tab1内容
-</div>
-<div *ngIf="active == 1">
-  tab2内容
-</div>
-<div *ngIf="active == 2">
-  tab3内容
-</div>
+
+<ul id="rightMenusNav"  class = "rightMenusNav" [ngStyle]="{'left':navLeft,'top': navTop}">
+  <li *ngFor='let btn of alongBtns' (click) = "btnRightClick(btn.btnKey)">
+    <a class="aNot" [ngStyle]="{padding: btn.btnKey=='-'?'0px 20px':'8px 20px' }">{{btn.btnName}}</a>
+  </li>
+</ul>
