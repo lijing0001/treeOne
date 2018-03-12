@@ -1,15 +1,15 @@
 <ul class="slideNav">
   <li *ngFor='let item of node;let i = index;' [ngClass]="{'active' : item.active , 'selected' : item.selected}">
 
-    <a class="aNot" *ngIf="(!item?.children) || (item.children.length == 0)" (click)="textClick(item , $event ,i , false)">
-      <span class="nav-text text-ell pad-r-40" title="{{item.name}}">
+    <a  *ngIf="(!item?.children) || (item.children.length == 0)" (click)="textClick(item , $event ,i , false)">
+      <span class="nav-text" title="{{item.name}}">
         {{item.name}}
       </span>
     </a>
 
     <a class="aNot" *ngIf="item.children && item.children.length !== undefined && item.children.length !== 0" (click)="liClick(item , i)">
 
-      <span class="nav-text text-elll pad-r-40" title="{{item.name}}">
+      <span class="nav-text" title="{{item.name}}">
         <span>
           {{item.name}}
         </span>

@@ -17,7 +17,27 @@ export class NavComponent {
           children: [
             {
               id: 111,
-              name: 'child3'
+              name: 'child3',
+              children: [
+                {
+                  id: 1111,
+                  name: 'child31'
+                }, {
+                  id: 1121,
+                  name: 'child41',
+                  children: [
+                    {
+                      id: 11211,
+                      name: 'child313'
+                    }, {
+                      id: 11212,
+                      name: 'child414'
+                    },
+
+                  ]
+                },
+
+              ]
             }, {
               id: 112,
               name: 'child4'

@@ -45,6 +45,7 @@ export class TabComponent {
   @Input() modal: any;
   public checkTab(index) {
     this.active = index;
+    jQuery('#rightMenusNav').css('display', 'none');
   }
 
   public onRightMenus(e, i) {
