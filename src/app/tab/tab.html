@@ -8,7 +8,7 @@
 </ul>
 
 <ul id="rightMenusNav"  class = "rightMenusNav" [ngStyle]="{'left':navLeft,'top': navTop}">
-  <li *ngFor='let btn of alongBtns' (click) = "btnRightClick(btn.btnKey,index)">
+  <li *ngFor='let btn of alongBtns;let i = index;' (click) = "btnRightClick(btn.btnKey,i)">
     <a class="aNot" [ngStyle]="{padding: btn.btnKey=='-'?'0px 20px':'8px 20px' }">{{btn.btnName}}</a>
   </li>
 </ul>

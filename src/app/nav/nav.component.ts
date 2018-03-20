@@ -74,7 +74,7 @@ export class NavComponent {
       name: 'nav'
     }
   ];
-  @Input() isdbl: boolean = false;
+  @Input() istrue: boolean = false;
   @Input() public textField: string = 'name';
 
 
@@ -95,8 +95,8 @@ export class NavComponent {
 
 
 
-  public textClick(item: any, event: any, index: any, isdbl: boolean = false) {
-    console.log(item, event, index, isdbl)
+  public textClick(item: any, event: any, index: any, istrue: boolean = false) {
+    console.log(item, event, index, istrue)
     event && event.stopPropagation();
     if (!item['selected']) {
       item['selected'] = !item['selected'];
@@ -123,26 +123,9 @@ export class NavComponent {
     selected = selected.concat(item);
 
     let data = [];
-
-    if (selected.length && selected[0] != null) {
-      data = [this.node[selected[0]]];
-      this.resetEmitData(data, selected, this.node[selected[0]]);
-    }
-
     this.nodeClick.emit({
       item: data[data.length - 1],
     });
-
-  }
-
-  public resetEmitData(data, selected, node) {
-
-    selected.splice(0, 1);
-
-    if (selected.length && selected[0] != null) {
-      data.push(node['children'][selected[0]])
-      this.resetEmitData(data, selected, node['children'][selected[0]]);
-    }
 
   }
 

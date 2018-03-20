@@ -17,7 +17,7 @@
     </a>
 
     <ul class="nav-sub" *ngIf="item.children" [hidden]="!item.active">
-      <app-nav-list [isdbl]="isdbl" [node]="item.children" [textField]="textField" [showName]="showName" (nodeClick)="onNodeClick($event)"></app-nav-list>
+      <app-nav-list [istrue]="istrue" [node]="item.children" [textField]="textField" [showName]="showName" (nodeClick)="onNodeClick($event)"></app-nav-list>
     </ul>
 
   </li>

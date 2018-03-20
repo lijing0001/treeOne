@@ -1,0 +1,10 @@
+<div class="wrap">
+  <div>
+    <ul id="sidebar-list" class="sidebar-list" >
+      <!-- <app-menu-item [menuItem]="item" (itemHover)="hoverItem($event)" (toggleSubMenu)="toggleSubMenu($event)" *ngFor="let item of menuItems"></app-menu-item> -->
+    </ul>
+
+    <div class="sidebar-hover-elem" [ngStyle]="{top: hoverElemTop + 'px', height: hoverElemHeight + 'px'}" [ngClass]="{'show-hover-elem': showHoverElem }"></div>
+  </div>
+
+</div>

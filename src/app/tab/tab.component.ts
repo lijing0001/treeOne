@@ -77,11 +77,14 @@ export class TabComponent {
     }
     if (btnKey == 'del'){
       this.list.splice(this.selectTabIndex, 1);
+      console.log(index);
+      this.active = index;
     }
     if (btnKey == 'delone'){
       let tab = this.list[this.selectTabIndex];
 
       this.list = [tab];
+      this.active = index;
     }
   }
 

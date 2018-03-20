@@ -1,5 +1,6 @@
 ul li{
   list-style: none;
+  cursor: pointer;
 }
 li{
   line-height: 30px;
@@ -59,26 +60,6 @@ a{
     margin-right: 0.3rem;
     top: 0;
     min-width: 1.5rem;
-  }
-}
-.slideNav{
-  ul{
-    li{
-      ul{
-        li{
-          a{
-            padding-left: 24px;
-          }
-          ul{
-            li{
-              a{
-                padding-left: 48px;
-              }
-            }
-          }
-        }
-      }
-    }
   }
 }
 .nav-name{

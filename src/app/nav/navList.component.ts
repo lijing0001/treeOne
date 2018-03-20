@@ -3,6 +3,7 @@ declare var $: any;
 @Component({
   selector: 'app-nav-list',
   templateUrl: './navList.html',
+  styleUrls: ['./navList.scss']
 })
 export class NavListComponent {
   @Input() node = [
@@ -53,7 +54,7 @@ export class NavListComponent {
       name: 'nav'
     }
   ];
-  @Input() isdbl: boolean = false;
+  @Input() istrue: boolean = false;
   @Output() public nodeClick: EventEmitter<any> = new EventEmitter();
   @Input() public textField: string = 'name';
   @Input() public showName(item) {
@@ -71,10 +72,10 @@ export class NavListComponent {
 
 
 
-  public textClick(item: any, event: any, index: any, isdbl: boolean = false) {
+  public textClick(item: any, event: any, index: any, istrue: boolean = false) {
 
     event && event.stopPropagation();
-    console.log(item, event, index, isdbl)
+    console.log(item, event, index, istrue)
     if (!item['selected']) {
       item['selected'] = !item['selected'];
     }
